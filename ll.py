@@ -14,9 +14,4 @@ class Node:
         self.data = data
         self.next = None
 
-if __name__=='__main__':
-        ll = LinkedList()
-        ll.head = Node(15)
-        ll.head.next = Node( 25)
-        ll.head.next.next = Node(35)
-        ll.printList()
+
