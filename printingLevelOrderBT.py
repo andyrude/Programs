@@ -14,6 +14,19 @@ def levelOrderBt(node):
             helper = []
             print()
 
+
+def printInorder(root):
+    if root:
+        # First recur on left child
+        printInorder(root.left)
+
+        # then print the data of node
+        print(root.val),
+
+        # now recur on right child
+        printInorder(root.right)
+
+
 root = Node(10)
 root.left = Node(15)
 root.right = Node(25)
@@ -22,4 +35,4 @@ root.left.right = Node(75)
 root.right.left = Node(65)
 root.right.right = Node(58)
 root.left.right.left = Node(87)
-levelOrderBt( root)
+printInorder(root)
