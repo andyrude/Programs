@@ -1,3 +1,4 @@
+from BinaryTree import Node
 def FlipEquivalent( node1, node2):
     if node1 is None and node2 is None:
         return True
