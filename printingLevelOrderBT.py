@@ -26,6 +26,13 @@ def printInorder(root):
         # now recur on right child
         printInorder(root.right)
 
+def height( node):
+    if node is None:
+        return 0;
+    c1 = height( node.left)
+    c2 = height( node.right)
+    return max( c1, c2) + 1
+
 
 root = Node(10)
 root.left = Node(15)
@@ -35,4 +42,4 @@ root.left.right = Node(75)
 root.right.left = Node(65)
 root.right.right = Node(58)
 root.left.right.left = Node(87)
-printInorder(root)
+print( height( root))

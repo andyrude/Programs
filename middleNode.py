@@ -24,11 +24,16 @@ def display( head):
         print( node.data)
         node = node.next
 
+def height( node):
+    if node is None:
+        return 0;
+    c1 = height( node.left)
+    c2 = height( node.right)
+    return max( c1, c2) + 1
 
 
 
 
-l1 = LinkedList()
 l1.head = Node(20)
 l1.head.next = Node(30)
 l1.head.next.next = Node(30)
