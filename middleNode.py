@@ -8,12 +8,32 @@ def secondMiddl( head):
         slow = slow.next
     print( slow.data)
 
+def duplicateData( head):
+    current = head
+    dummyNode = Node(-1)
+    dummyNode.next = current
+    while current.next is not None:
+        if current.data == current.next.data:
+            temp = current.next.next
+            current.next = temp
+    return dummyNode.next
+
+def display( head):
+    node = head
+    while head is not None:
+        print( node.data)
+        node = node.next
+
+
+
+
 
 l1 = LinkedList()
 l1.head = Node(20)
 l1.head.next = Node(30)
-l1.head.next.next = Node(40)
+l1.head.next.next = Node(30)
 l1.head.next.next.next = Node( 70)
 l1.head.next.next.next.next = Node(130)
 l1.head.next.next.next.next.next = Node(130)
-secondMiddl( l1.head)
+l2 = duplicateData( l1.head)
+print( l1.head.next.data)
