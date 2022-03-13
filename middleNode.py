@@ -20,7 +20,7 @@ def duplicateData( head):
 
 def display( head):
     node = head
-    while head is not None:
+    while node is not None:
         print( node.data)
         node = node.next
 
@@ -35,5 +35,5 @@ l1.head.next.next = Node(30)
 l1.head.next.next.next = Node( 70)
 l1.head.next.next.next.next = Node(130)
 l1.head.next.next.next.next.next = Node(130)
-l2 = duplicateData( l1.head)
-print( l1.head.next.data)
+l1.head = duplicateData( l1.head)
+print( l1.head.data)
