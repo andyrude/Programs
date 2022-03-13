@@ -28,7 +28,7 @@ def printInorder(root):
 
 def height( node):
     if node is None:
-        return 0;
+        return -1;
     c1 = height( node.left)
     c2 = height( node.right)
     return max( c1, c2) + 1
