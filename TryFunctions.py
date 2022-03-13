@@ -53,4 +53,19 @@ def preOrder( node):
     preOrder( node.left)
     preOrder( node.right)
 
+def height( node):
+    if node is None:
+        return -1
+    c1 = height( node.left)
+    c2 = height( node.right)
+    return max( c1, c2) + 1
+
+def dia( node):
+    if Node is None:
+        return 0
+    c1 = height( node.left)
+    c2 = height( node.right)
+    return max( c1+c2 + 2, max( c1, c2))
+
+
 
